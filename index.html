@@ -5,32 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Car Rental</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon" />
+    <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
+    <link rel="stylesheet" href="./CSS/style.css" />
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
   <body>
     <div class="main">
       <div class="nav">
-        <div class="logo"> <h2>CarRental</h2> </div>
+        <div class="logo"><h2>CAR RENTAL</h2></div>
         <div class="links">
           <ul>
-            <li><a href=""> Link1  </a></li>
-            <li><a href=""> Link2 </a></li>
-            <li><a href=""> Link3 </a></li>
-            <li><a href=""> Link4 </a></li>
-            <li><a href=""> Link5 </a></li>
+            <li><a href=""> Home </a></li>
+            <li><a href=""> Cars </a></li>
+            <li><a href=""> Testimonials </a></li>
+            <li><a href=""> About Us </a></li>
+            <li><a href=""> Contact US </a></li>
           </ul>
         </div>
         <div class="btns">
-           <a href="signin.php"> <button id="signin" > Signin</button></a> 
-          <button id="signup"> Signup</button>
+          <a href="signup.php"> <button id="signin">Signup</button></a>
+          <button id="signup">Signup</button>
         </div>
       </div>
 
-    <div class="heading">
-           <h1>Explore the worlds largest car sharing marketplace</h1>  
+      <div class="outer">
+        <div class="description">
+          <div class="heading">
+            <h1>Easy and Fastest way to Rent Car & Driver</h1>
+            <p>
+              Book a Car Rental in Aurangabad and enjoy a <br />
+              hassle free journey with Car Rental's on-time service.
+            </p>
+          </div>
+        </div>
+        <div class="image">
+          <img
+            width="100%"
+            height="100%"
+            src="./assets/carImage.png"
+            alt=" loading"
+            srcset=""
+          />
+        </div>
+      </div>
     </div>
-
-    </div>
+      <div class="search">
+   
+        <form action="" method="post" class="search_car_form">
+         <div id="pickup_loc">
+           <label for="">Pick Up Location</label>
+            <input type="text" name="pick_up_loc" placeholder="Pick Up Location " />
+         </div>
+         <div id="return_loc">
+           <label for=""> Return location</label>
+           <input type="text" name="return_loc" placeholder="Return location " />
+         </div>
+         <div id="pickup_date">
+           <label for="">Pick Up Date</label>
+           <input type="date" name="pick_up_date" placeholder=" Pick Up Date" />
+         </div>
+         <div id="return_date">
+           <label for="">Return Date</label>
+           <input type="date" name="return_date" placeholder="Return Date " />
+         </div>
+          <input type="submit" name="Search Car " id="search_car">
+        </form>
+      
+      </div>
   </body>
 </html>

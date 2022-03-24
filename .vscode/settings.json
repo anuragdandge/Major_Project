@@ -1,5 +1,22 @@
 {
     "cSpell.words": [
-        "btns"
+        "btns",
+        "Savaari's"
+    ],
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "MySQL",
+            "database": "demo",
+            "username": "root",
+            "connectionTimeout": 60,
+            "password": ""
+        }
     ]
 }

@@ -10,7 +10,14 @@
         form{
             display: flex;
             flex-direction: column;
-            
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        body{
+            height: 100vh;
+            display: grid;
+            place-items: center;
         }
     </style>
 </head>
@@ -22,6 +29,7 @@
         <input type="text" name="phone" placeholder="Phone">
         <textarea rows="5" type="text" name="address" placeholder="address" ></textarea>
         <input type="password" name="password" placeholder="password">
+        <input type="submit" value="signup">
     </form>
 
 </body>
