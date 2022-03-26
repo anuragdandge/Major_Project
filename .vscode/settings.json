@@ -18,5 +18,6 @@
             "connectionTimeout": 60,
             "password": ""
         }
-    ]
+    ],
+    "livePreview.defaultPreviewPath": "/index.html"
 }

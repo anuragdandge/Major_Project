@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="Favicon.png" type="image/x-icon" />
     <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
     <link rel="stylesheet" href="./CSS/style.css" />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
@@ -85,7 +85,18 @@
             <label for="">Return Date</label>
             <input type="date" name="return_date" placeholder="Return Date " />
           </div>
-          <input type="submit" name="Search Car " id="search_car" />
+          <input
+            style="
+              margin-top: 28px;
+              width: 100%;
+              background: #b067f8;
+              color: white;
+              font-size: 22px;
+            "
+            type="submit"
+            name="Search Car "
+            id="search_car"
+          />
         </form>
       </div>
     </div>
@@ -155,33 +166,93 @@
       <div class="book_car_bar">
         <div class="title"><h2>Choose Your Suitable Car</h2></div>
         <div class="dropdown_options">
-          <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-          </select>
+          <style>
+            .dropbtn {
+              background-color: #b678f2;
+              color: white;
+              padding: 16px;
+              font-size: 16px;
+              border: none;
+              cursor: pointer;
+              border-radius: 7px 7px 0px 0px ;
+              width: 150px;
+            }
 
-          <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-          </select>
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
 
-          <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-          </select>
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+              z-index: 2;
+              border-radius: 0px 0px 7px 7px;
+            }
 
-          <select name="cars" id="cars">
-            <option value="volvo">Volvo</option>
-            <option value="saab">Saab</option>
-            <option value="opel">Opel</option>
-            <option value="audi">Audi</option>
-          </select>
+            /* Links inside the dropdown */
+            .dropdown-content a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+              background-color: #f1f1f1;
+            }
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {
+              display: block;
+              border-radius: 0px 0px 7px 7px;
+              transition: display 0.5s;
+            }
+
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {
+              background-color: #b678f2;
+            }
+          </style>
+
+          <!-- <script>
+         $("document").ready(function () {
+           $(".dropdown").hover(function(){
+            $(".dropdown").css({"display":"block","transition":"all .5s"})
+           });
+         });
+
+          </script> -->
+          <div class="dropdown">
+            <button class="dropbtn">Price</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Brand</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn">Type</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -192,271 +263,282 @@
             height: 80%;
             padding: 50px;
           }
-
-          .swiper-slide {
-            text-align: center;
-            font-size: 18px;
-            background: #fff;
-            box-shadow:0px 20px 20px #6e6e6e1c;
-            border-radius: 10px;
-            /* Center slide text vertically */
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: -webkit-flex;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            -webkit-justify-content: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            -webkit-align-items: center;
-            align-items: center;
-
-            display: flex;
-            flex-direction: column;
-          }
-
-          .swiper-slide img {
+          .car_photo img {
             display: block;
-            width: 100%;
-            height: 85%;
+            /* width: 100%;
+            height: 80%; */
+            width: 96%;
+            height: 60%;
             object-fit: cover;
-            padding: 5px;
           }
-
+          .car_photo img { transition: all .2s ease-in-out; }
+          .swiper-slide:hover > .car_photo img{ transform: scale(1.4); }
           .swiper {
             margin-left: auto;
             margin-right: auto;
           }
         </style>
 
+       
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
-                <img src="./assets/car-img1.png" alt="Loading..." srcset="" />
+                <img
+                  class="car_image"
+                  src="./assets/car-img1.png"
+                  alt="Loading..."
+                  srcset=""
+                />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"> 4 Seats </div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img2.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img3.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img4.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img5.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img6.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img1.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img2.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="car_name"><h2>Bhendi</h2></div>
+              <div class="car_name"><h2>Car Name</h2></div>
               <div class="car_photo">
                 <img src="./assets/car-img3.png" alt="Loading..." srcset="" />
               </div>
               <div class="car_price">100 Rs. / Day</div>
               <div class="car_specs">
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/seat.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">4 Seats</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon"><img src="./assets/oil.png" alt="" /></div>
-                  <div id="prop"></div>
+                  <div id="prop">Petrol</div>
                 </div>
-                <div class="specs1">
+                <div class="specs">
                   <div id="icon">
                     <img src="./assets/ac.png" alt="" srcset="" />
                   </div>
-                  <div id="prop"></div>
+                  <div id="prop">AC</div>
                 </div>
+              </div>
+              <div class="rent_car_btn">
+                <button>Rent a Car</button>
               </div>
             </div>
           </div>
@@ -466,6 +548,16 @@
         </div>
       </div>
     </div>
+
+     <div class="main4">
+
+      <div class="testimonial">
+
+       
+
+      </div>      
+
+     </div>
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -485,5 +577,11 @@
         },
       });
     </script>
+   
+   
+
+
+
+
   </body>
 </html>

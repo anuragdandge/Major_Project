@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&family=Staatliches&display=swap');
 
 * {
     margin: 0;
@@ -13,6 +14,12 @@ html {
     padding: 0;
     overflow: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    scroll-behavior: inherit;
+    scroll-behavior: initial;
+    scroll-behavior: revert;
+    scroll-behavior: unset;
 }
 
 ::-webkit-scrollbar {
@@ -170,6 +177,7 @@ p {
     font-family: 'Raleway', sans-serif;
     color: black;
     text-align: left;
+    font-weight: bolder;
 }
 
 .div1 {
@@ -214,7 +222,7 @@ p {
     justify-content: center;
     align-items: center;
     flex: row;
-    width: 60%;
+    width: 67%;
     padding: 10px 30px 10px 30px;
     margin: 20px;
     background-color: rgb(255, 255, 255);
@@ -240,6 +248,7 @@ input {
     margin-top: 3px;
     border: solid .5px #431d61;
     border-radius: 10px;
+
 }
 
 .main2 {
@@ -392,27 +401,30 @@ main3 .book_car_bar .title h2 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 60%;
+    height: 80%;
     width: 100%;
 }
 
 .car_name {
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     /* background: #ca98ebc2; */
-    height: 12%;
+    height: 8%;
     width: 100%;
     border-radius: 10px 10px 0px 0px;
     text-align: left;
+
 }
 
-.car_name h2{
+.car_name h2 {
     font-family: 'Fredoka', sans-serif;
     padding-left: 30px;
 }
 
 .car_photo {
     /* background: #4235351f; */
-    height: 55%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -423,9 +435,10 @@ main3 .book_car_bar .title h2 {
     text-align: left;
     padding-left: 30px;
     margin-top: -10px;
-    height: 10%;
+    height: 5%;
     /* background: #6b36361f; */
     width: 85%;
+    font-weight: bolder;
     font-family: 'Raleway', sans-serif;
 
 }
@@ -439,10 +452,14 @@ main3 .book_car_bar .title h2 {
     flex-direction: row;
     justify-content: space-evenly;
 }
-#prop{
+
+#prop {
     justify-content: center;
     align-items: center;
     display: flex;
+    font-family: 'Staatliches', cursive;
+    font-size: 15px;
+    padding-top: 3px;
 }
 
 #icon {
@@ -455,3 +472,78 @@ main3 .book_car_bar .title h2 {
     display: flex;
     padding: 5px;
 }
+
+#icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.rent_car_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    border-radius: 10px;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* box-shadow: 0px 20px 20px #6e6e6e1c; */
+    /* box-shadow:inset 7px 7px 8px 3px #6e6e6e1c,0px 20px 20px 3px #6e6e6e1c; */
+    display: flex;
+    flex-direction: column;
+}
+
+.swiper-slide:hover{
+    box-shadow:inset 7px 7px 8px 3px #6e6e6e1c,0px 20px 20px 3px #6e6e6e1c;
+    /* transition: all .2s ease-in-out; */
+    
+}
+.rent_car_btn button {
+    width: 80%;
+    height: 70%;
+    background-color: #b083d4;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Fredoka', sans-serif;
+    outline: none;
+    font-size: 20px;
+    border: 10px;
+    box-shadow: 0px 9px 16px 6px #0000001f;
+    /* display: none; */
+}
+
+.specs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main4{
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ecd4ffc5;
+}
+
+
