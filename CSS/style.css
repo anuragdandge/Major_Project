@@ -547,3 +547,89 @@ main3 .book_car_bar .title h2 {
 }
 
 
+.driverDP{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 7px;
+    margin-left: 20px;
+}
+
+.profile{
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 3px 8px #57575745;
+    font-family: "Roboto Light", sans-serif;
+}
+
+.profile_name{
+    display: flex;
+    align-items: center;
+}
+
+.profile_name span{
+    font-weight: bold;
+    color: #8a8a8a;
+}
+
+.profile_top{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile_contact{
+  display: flex;
+}
+
+.call_btn{
+    background: #22C55E;
+    padding: 6px 20px;
+    border: 1px solid #1dad52;
+    color: white;
+    border-radius: 50px;
+    display: flex;
+    outline: 0;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat_btn{
+    background: transparent;
+    padding: 6px 20px;
+    border: 1px solid #1dad52;
+    color: #22C55E;
+    border-radius: 50px;
+    display: flex;
+    outline: 0;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.profile_bottom{
+    display: flex;
+    padding: 0 50px;
+    justify-content: space-between;
+}
+
+
+.profile_img{
+    background-color: #b4b4b4;
+    border-radius: 50px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.profile_img img{
+    width: 50px;
+    height: 50px;
+}
